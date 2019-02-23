@@ -16,14 +16,17 @@ public:
 	~MyString();
 	MyString operator=(const MyString &other);
 	MyString operator+(const MyString &other);
-	MyString operator==(const MyString &other);
-	const char* c_str();
+	bool operator==(const MyString &other);
+	char* const c_str();
 };
 
-//Overloaded << operator
-//Establishes how a MyString object is output
-ostream& operator<<(ostream& myStream, MyString& str)
-{
-	myStream << str.c_str();
-	return myStream;
-}
+////Overloaded << operator: establishes how a MyString object is output
+//// parameters: 
+////  myStream: the stream of output to release
+////  str: the MyString object to return values from
+//// return type: ostream
+//ostream& operator<< (ostream& myStream, const MyString& myString)
+//{
+//	myStream << myString.str;
+//	return myStream;
+//}
