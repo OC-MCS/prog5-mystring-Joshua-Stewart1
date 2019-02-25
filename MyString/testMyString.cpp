@@ -6,10 +6,20 @@
 //=====================================================
 
 // test driver code goes here
+#include "MyString.h"
 #include <iostream>
 using namespace std;
-#include "MyString.h"
 
+//Overloaded << operator: establishes how a MyString object is output
+// parameters: 
+//  myStream: the stream of output to release
+//  str: the MyString object to return values from
+// return type: ostream
+ostream& operator<< (ostream& myStream, const MyString& myString)
+{
+	myStream << myString.c_str();
+	return myStream;
+}
 
 int main()
 {
@@ -40,7 +50,7 @@ int main()
 	//Overloaded ==
 	if (s5 == s4)
 	{
-		cout << "True" << endl << endl;
+		cout << "s5 == s4" << endl << endl;
 	}
 
 	return 0;
