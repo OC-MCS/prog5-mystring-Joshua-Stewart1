@@ -10,10 +10,11 @@
 using namespace std;
 #include "MyString.h"
 
+
 int main()
 {
 	char string1[17] = "This is a string";
-	char string2[22] = "this is also a string";
+	char string2[23] = " this is also a string";
 	
 	//Default Constructor
 	MyString s1;
@@ -21,25 +22,25 @@ int main()
 
 	//Regular Constructor
 	MyString s2(string1);
-	cout << s2.c_str() << endl << endl;
+	cout << s2 << endl << endl;
 
 	//Copy Constructor
 	MyString s3 = s2;
-	cout << s3.c_str() << endl << endl;
+	cout << s3 << endl << endl;
 
 	//Overloaded assignment
 	MyString s4;
 	s4 = s2;
-	cout << s4.c_str() << endl << endl;
+	cout << s4 << endl << endl;
 
 	//Overloaded +
 	MyString s5(string2);
-	cout << (s4 + s5).c_str() << endl << endl;
+	cout << s4 + s5 << endl << endl;
 
 	//Overloaded ==
 	if (s5 == s4)
 	{
-		cout << "true" << endl << endl;
+		cout << "True" << endl << endl;
 	}
 
 	return 0;

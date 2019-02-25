@@ -87,8 +87,8 @@ bool MyString::operator==(const MyString& other)
 
 // c_str: get the value of the objects c-string
 // parameters: none
-// return type: char* const
-char* const MyString::c_str()
+// return type: char*
+char* MyString::c_str() const
 {
 	return str;
 }
